@@ -1,0 +1,2 @@
+# bingojs
+bingojs
