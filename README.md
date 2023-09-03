@@ -6,7 +6,7 @@ Na versão atual, o sistema gera números e realiza sorteios de forma aleatória
 
 ## Screenshots
 
-![App Screenshot](images\bingo-project.gif)
+![App Screenshot](images/bingo-project.gif)
 
 ## Demonstração
 
