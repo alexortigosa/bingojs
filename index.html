@@ -1,16 +1,47 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
 <head>
-	<meta charset="utf-8">
-	<title></title>
-	<script src="./bingo.js" type="text/javascript" charset="utf-8" async defer></script>
-	<link rel="stylesheet" type="text/css" href="./bingo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bingo</title>
+
+  <link rel="stylesheet" type="text/css" href="./styles/bingo.css">
 </head>
-<body onload="initTable()">
-	<div id="bingo"></div>
-	<div id="generate">
-		<button onclick="selectNum()">Generar Selección</button>
-		<p>Seleccion: </p>
-		<p id="seleccion"></p>
-	</div>
+
+<body class="bg-amber-50">
+  <section class="container mx-auto px-4">
+    <div class="grid grid-cols-10 gap-2 pt-4">
+      <div class="flex flex-col col-span-4 md:col-span-2">
+        <input type="text" name="npt-qt-numbers" class="border-2 border-amber-600 rounded p-2"
+          placeholder="Qt. Numeros">
+      </div>
+
+      <button
+        class="bg-amber-200 text-amber-600 px-2 py-1 rounded col-span-3 md:col-span-1 hover:bg-amber-600 hover:text-amber-200"
+        onclick="generateBingoTable()">Gerar</button>
+      <button class="bg-amber-200 text-amber-600 px-2 py-1 rounded col-start-8 col-span-3 md:col-span-1 md:col-start-10"
+        onclick="generateNewNumber()">Sortear</button>
+    </div>
+
+    <div id="bingo" class="pt-4 grid grid-cols-10 gap-2"></div>
+  </section>
+
+  <section class="container mx-auto px-4 pt-4">
+    <h2 class="text-2xl font-bold text-amber-600">Resultados</h2>
+    <div id="result-list"></div>
+  </section>
+
+  <script src="./scripts/bingo.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="/lib/cdn.tailwindcss.com_3.3.3.js"></script>
+  <script>
+    window.onload = () => {
+      generateBingoTable()
+    }
+  </script>
 </body>
+
 </html>
